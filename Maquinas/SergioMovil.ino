@@ -1,13 +1,12 @@
 
 #include <SoftwareSerial.h>
 
-bool on_off;
+bool on_off = 0;
 
 //Pines
-#define rec  0;//Recepción de datos
-#define encender 6;
-#define leds 5;
-#define outputV 4;
+int rec = '100';//Recepción de datos
+#define leds 5
+#define outputV 3
 
 
 
@@ -30,29 +29,16 @@ void loop() {
  }
 
 
-//Encender
+
+//
 //==============================================================================
-if (rec == 'a') {
-  on_off=1;
-}
+//Serial.println(rec);
 
-else if (rec == 'b') {
-  on_off=0;
-}
-
-else {
-  on_off=on_off;
-}
-
-//Velocidades Y Leds
-//==============================================================================
-
-if (on_off) {
-
-  digitalWrite(encender, HIGH);
-
-
-  if (rec == 'l') {
+  if (rec == 'b') {
+    digitalWrite(leds, LOW);
+    analogWrite(outputV, 255);
+  }
+  else if (rec == 'l') {
     digitalWrite(leds, HIGH);
   }
 
@@ -97,55 +83,48 @@ if (on_off) {
   }
 
   else if (rec == '45') {
-   analogWrite(outputV, 255);
+   analogWrite(outputV, 45);
   }
 
   else if (rec == '50') {
-   analogWrite(outputV, 255);
+   analogWrite(outputV, 45);
   }
 
   else if (rec == '55') {
-   analogWrite(outputV, 255);
+   analogWrite(outputV, 45);
   }
 
   else if (rec == '60') {
-   analogWrite(outputV, 255);
+   analogWrite(outputV, 30);
   }
 
   else if (rec == '65') {
-   analogWrite(outputV, 255);
+   analogWrite(outputV, 30);
   }
 
   else if (rec == '70') {
-   analogWrite(outputV, 255);
+   analogWrite(outputV, 30);
   }
 
   else if (rec == '75') {
-   analogWrite(outputV, 255);
+   analogWrite(outputV, 15);
   }
 
   else if (rec == '80') {
-   analogWrite(outputV, 255);
+   analogWrite(outputV, 15);
   }
 
   else if (rec == '85') {
-   analogWrite(outputV, 255);
+   analogWrite(outputV, 15);
   }
 
   else if (rec == '90') {
-   analogWrite(outputV, 255);
+   analogWrite(outputV, 0);
   }
 
   else if (rec == '100') {
-   analogWrite(outputV, 255);
+   analogWrite(outputV, 0);
   }
 
-}
-
-else {
-  digitalWrite(encender, LOW);
-  analogWrite(outputV, 255);
-  digitalWrite(leds, LOW);
-}
 ;
 }
