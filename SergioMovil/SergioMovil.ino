@@ -4,8 +4,7 @@
 bool on_off = 0;
 
 //Pines
-int rec = '100';//Recepción de datos
-#define encender 6
+int rec = 'z';//Recepción de datos
 #define leds 5
 #define outputV 3
 
@@ -13,8 +12,7 @@ int rec = '100';//Recepción de datos
 
 void setup() {
 //Inicializacion
-  pinMode(encender, OUTPUT);
-  digitalWrite(encender, LOW);
+
 
   pinMode(leds, OUTPUT);
   digitalWrite(leds, LOW);
@@ -30,122 +28,102 @@ void loop() {
  }
 
 
-//Encender
-//==============================================================================
-if (rec == 'a') {
-  on_off=1;
-}
 
-else if (rec == 'b') {
-  on_off=0;
-}
-
-else {
-  on_off=on_off;
-}
-
-//Velocidades Y Leds
+//
 //==============================================================================
 //Serial.println(rec);
-if (on_off) {
 
-  digitalWrite(encender, HIGH);
-
-
-  if (rec == 'l') {
+  if (rec == 'z') {
+    digitalWrite(leds, LOW);
+    analogWrite(outputV, 255);
+  }
+  else if (rec == '1') {
     digitalWrite(leds, HIGH);
   }
 
-  else if (rec == 'o') {
+  else if (rec == '2') {
     digitalWrite(leds, LOW);
   }
 
-  else if (rec == '0') {
+  else if (rec == 'a') {
    analogWrite(outputV, 255);
   }
 
-  else if (rec == '5') {
+  else if (rec == 'b') {
    analogWrite(outputV, 255);
   }
 
-  else if (rec == '10') {
+  else if (rec == 'c') {
    analogWrite(outputV, 255);
   }
 
-  else if (rec == '15') {
+  else if (rec == 'd') {
    analogWrite(outputV, 255);
   }
 
-  else if (rec == '20') {
+  else if (rec == 'e') {
    analogWrite(outputV, 255);
   }
 
-  else if (rec == '25') {
+  else if (rec == 'f') {
    analogWrite(outputV, 255);
   }
 
-  else if (rec == '30') {
+  else if (rec == 'g') {
    analogWrite(outputV, 255);
   }
 
-  else if (rec == '35') {
+  else if (rec == 'h') {
    analogWrite(outputV, 255);
   }
 
-  else if (rec == '40') {
+  else if (rec == 'i') {
    analogWrite(outputV, 255);
   }
 
-  else if (rec == '45') {
+  else if (rec == 'j') {
    analogWrite(outputV, 45);
   }
 
-  else if (rec == '50') {
+  else if (rec == 'k') {
+   analogWrite(outputV, 97);
+  }
+
+  else if (rec == 'l') {
    analogWrite(outputV, 45);
   }
 
-  else if (rec == '55') {
-   analogWrite(outputV, 45);
-  }
-
-  else if (rec == '60') {
+  else if (rec == 'm') {
    analogWrite(outputV, 30);
   }
 
-  else if (rec == '65') {
+  else if (rec == 'n') {
    analogWrite(outputV, 30);
   }
 
-  else if (rec == '70') {
+  else if (rec == 'o') {
    analogWrite(outputV, 30);
   }
 
-  else if (rec == '75') {
+  else if (rec == 'p') {
    analogWrite(outputV, 15);
   }
 
-  else if (rec == '80') {
+  else if (rec == 'q') {
    analogWrite(outputV, 15);
   }
 
-  else if (rec == '85') {
+  else if (rec == 'r') {
    analogWrite(outputV, 15);
   }
 
-  else if (rec == '90') {
+  else if (rec == 's') {
    analogWrite(outputV, 0);
   }
 
-  else if (rec == '100') {
+  else if (rec == 't') {
    analogWrite(outputV, 0);
   }
 
-}
-
-else if (!on_off) {
-  digitalWrite(encender, LOW);
-  analogWrite(outputV, 255);
-  digitalWrite(leds, LOW);
-}
 ;
 }
