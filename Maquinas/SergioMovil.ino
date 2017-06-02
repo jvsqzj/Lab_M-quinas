@@ -55,72 +55,90 @@ if (on_off) {
   if (rec == 'l') {
     digitalWrite(leds, HIGH);
   }
+
   else if (rec == 'o') {
     digitalWrite(leds, LOW);
   }
 
-  switch (rec) {
-      case '0':
-        analogWrite(outputV, 255);
-        break;
-      case '5':
-        analogWrite(outputV, 255);
-        break;
-      case '10':
-        analogWrite(outputV, 255);
-        break;
-      case '15':
-        analogWrite(outputV, 255);
-        break;
-      case '20':
-        analogWrite(outputV, 255);
-        break;
-      case '25':
-        analogWrite(outputV, 255);
-        break;
-      case '30':
-        analogWrite(outputV, 255);
-        break;
-      case '35':
-        analogWrite(outputV, 255);
-        break;
-      case '40':
-        analogWrite(outputV, 255);
-        break;
-      case '45':
-        analogWrite(outputV, 255);
-        break;
-      case '50':
-        analogWrite(outputV, 255);
-        break;
-      case '55':
-        analogWrite(outputV, 255);
-        break;
-      case '60':
-        analogWrite(outputV, 255);
-        break;
-      case '65':
-        analogWrite(outputV, 255);
-        break;
-      case '70':
-        analogWrite(outputV, 255);
-        break;
-      case '75':
-        analogWrite(outputV, 255);
-        break;
-      case '80':
-        analogWrite(outputV, 255);
-        break;
-      case '85':
-        analogWrite(outputV, 255);
-        break;
-      case '90':
-        analogWrite(outputV, 255);
-        break;
-      case '100':
-        analogWrite(outputV, 255);
-        break;
-    }
+  else if (rec == '0') {
+   analogWrite(outputV, 255);
+  }
+
+  else if (rec == '5') {
+   analogWrite(outputV, 255);
+  }
+
+  else if (rec == '10') {
+   analogWrite(outputV, 255);
+  }
+
+  else if (rec == '15') {
+   analogWrite(outputV, 255);
+  }
+
+  else if (rec == '20') {
+   analogWrite(outputV, 255);
+  }
+
+  else if (rec == '25') {
+   analogWrite(outputV, 255);
+  }
+
+  else if (rec == '30') {
+   analogWrite(outputV, 255);
+  }
+
+  else if (rec == '35') {
+   analogWrite(outputV, 255);
+  }
+
+  else if (rec == '40') {
+   analogWrite(outputV, 255);
+  }
+
+  else if (rec == '45') {
+   analogWrite(outputV, 255);
+  }
+
+  else if (rec == '50') {
+   analogWrite(outputV, 255);
+  }
+
+  else if (rec == '55') {
+   analogWrite(outputV, 255);
+  }
+
+  else if (rec == '60') {
+   analogWrite(outputV, 255);
+  }
+
+  else if (rec == '65') {
+   analogWrite(outputV, 255);
+  }
+
+  else if (rec == '70') {
+   analogWrite(outputV, 255);
+  }
+
+  else if (rec == '75') {
+   analogWrite(outputV, 255);
+  }
+
+  else if (rec == '80') {
+   analogWrite(outputV, 255);
+  }
+
+  else if (rec == '85') {
+   analogWrite(outputV, 255);
+  }
+
+  else if (rec == '90') {
+   analogWrite(outputV, 255);
+  }
+
+  else if (rec == '100') {
+   analogWrite(outputV, 255);
+  }
 
 }
 
