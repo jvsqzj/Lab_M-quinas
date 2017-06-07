@@ -8,6 +8,7 @@ int rec = 'z';//Recepción de datos
 #define leds 5
 #define outputV 3
 
+bool arrancar;
 
 
 void setup() {
@@ -16,7 +17,7 @@ void setup() {
 
   pinMode(leds, OUTPUT);
   digitalWrite(leds, LOW);
-
+  arrancar = 1;
 
   Serial.begin(9600); // Default communication rate of the Bluetooth module
 }
@@ -36,6 +37,7 @@ void loop() {
   if (rec == 'z') {
     digitalWrite(leds, LOW);
     analogWrite(outputV, 255);
+    arrancar = 1;
   }
   else if (rec == '1') {
     digitalWrite(leds, HIGH);
@@ -50,75 +52,216 @@ void loop() {
   }
 
   else if (rec == 'b') {
-   analogWrite(outputV, 255);
+   if(arrancar == 1){
+       analogWrite(outputV, 0);
+       delay(100);
+       arrancar = 0;
+   }
+   analogWrite(outputV, 199);
   }
 
   else if (rec == 'c') {
-   analogWrite(outputV, 255);
+   if(arrancar == 1){
+       analogWrite(outputV, 0);
+       delay(100);
+       arrancar = 0;
+     }
+   else {
+       arrancar = 0;
+     }
+   analogWrite(outputV, 198);
   }
 
   else if (rec == 'd') {
-   analogWrite(outputV, 255);
+   if(arrancar == 1){
+       analogWrite(outputV, 0);
+       delay(100);
+       arrancar = 0;
+     }
+   else {
+       arrancar = 0;
+     }
+   analogWrite(outputV, 195);
   }
 
   else if (rec == 'e') {
-   analogWrite(outputV, 255);
+   if(arrancar == 1){
+       analogWrite(outputV, 0);
+       delay(100);
+       arrancar = 0;
+     }
+   else {
+       arrancar = 0;
+     }
+   analogWrite(outputV, 192);
   }
 
   else if (rec == 'f') {
-   analogWrite(outputV, 255);
+   if(arrancar == 1){
+       analogWrite(outputV, 0);
+       delay(100);
+       arrancar = 0;
+     }
+   else {
+       arrancar = 0;
+     }
+   analogWrite(outputV, 187);//25
   }
 
   else if (rec == 'g') {
-   analogWrite(outputV, 255);
+   if(arrancar == 1){
+       analogWrite(outputV, 0);
+       delay(100);
+       arrancar = 0;
+     }
+   else {
+       arrancar = 0;
+     }
+   analogWrite(outputV, 182);
   }
 
   else if (rec == 'h') {
-   analogWrite(outputV, 255);
+   if(arrancar == 1){
+       analogWrite(outputV, 0);
+       delay(100);
+       arrancar = 0;
+     }
+   else {
+       arrancar = 0;
+     }
+   analogWrite(outputV, 174);
   }
 
   else if (rec == 'i') {
-   analogWrite(outputV, 255);
+   if(arrancar == 1){
+       analogWrite(outputV, 0);
+       delay(100);
+       arrancar = 0;
+     }
+   else {
+       arrancar = 0;
+     }
+   analogWrite(outputV, 168);
   }
 
   else if (rec == 'j') {
-   analogWrite(outputV, 45);
+   if(arrancar == 1){
+       analogWrite(outputV, 0);
+       delay(100);
+       arrancar = 0;
+     }
+   else {
+       arrancar = 0;
+     }
+   analogWrite(outputV, 164);
   }
 
   else if (rec == 'k') {
-   analogWrite(outputV, 97);
+   if(arrancar == 1){
+       analogWrite(outputV, 0);
+       delay(100);
+       arrancar = 0;
+     }
+   else {
+       arrancar = 0;
+     }
+   analogWrite(outputV, 160);//50
   }
 
   else if (rec == 'l') {
-   analogWrite(outputV, 45);
+   if(arrancar == 1){
+       analogWrite(outputV, 0);
+       delay(100);
+       arrancar = 0;
+     }
+   else {
+       arrancar = 0;
+     }
+   analogWrite(outputV, 140);
   }
 
   else if (rec == 'm') {
-   analogWrite(outputV, 30);
+   if(arrancar == 1){
+       analogWrite(outputV, 0);
+       delay(100);
+       arrancar = 0;
+     }
+   else {
+       arrancar = 0;
+     }
+   analogWrite(outputV, 128);
   }
 
   else if (rec == 'n') {
-   analogWrite(outputV, 30);
+   if(arrancar == 1){
+       analogWrite(outputV, 0);
+       delay(100);
+       arrancar = 0;
+     }
+   else {
+       arrancar = 0;
+     }
+   analogWrite(outputV, 120);
   }
 
   else if (rec == 'o') {
-   analogWrite(outputV, 30);
+   if(arrancar == 1){
+       analogWrite(outputV, 0);
+       delay(100);
+       arrancar = 0;
+     }
+   else {
+       arrancar = 0;
+     }
+   analogWrite(outputV, 115);
   }
 
   else if (rec == 'p') {
-   analogWrite(outputV, 15);
+   if(arrancar == 1){
+       analogWrite(outputV, 0);
+       delay(100);
+       arrancar = 0;
+     }
+   else {
+       arrancar = 0;
+     }
+   analogWrite(outputV, 110);//75 
   }
 
   else if (rec == 'q') {
-   analogWrite(outputV, 15);
+   if(arrancar == 1){
+       analogWrite(outputV, 0);
+       delay(100);
+       arrancar = 0;
+     }
+   else {
+       arrancar = 0;
+     }
+   analogWrite(outputV, 74);
   }
 
   else if (rec == 'r') {
-   analogWrite(outputV, 15);
+   if(arrancar == 1){
+       analogWrite(outputV, 0);
+       delay(100);
+       arrancar = 0;
+     }
+   else {
+       arrancar = 0;
+     }
+   analogWrite(outputV, 56);
   }
 
   else if (rec == 's') {
-   analogWrite(outputV, 0);
+   if(arrancar == 1){
+       analogWrite(outputV, 0);
+       delay(100);
+       arrancar = 0;
+     }
+   else {
+       arrancar = 0;
+     }
+   analogWrite(outputV, 38);
   }
 
   else if (rec == 't') {
