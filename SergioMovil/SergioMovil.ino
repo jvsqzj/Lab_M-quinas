@@ -9,7 +9,7 @@ int rec = 'z';//Recepción de datos
 #define outputV 3
 
 bool arrancar;
-
+bool neon = 0;
 
 void setup() {
 //Inicializacion
@@ -24,6 +24,7 @@ void setup() {
 
 
 void loop() {
+  digitalWrite(leds, neon);
   if(Serial.available() > 0){ // Checks whether data is comming from the serial port
     rec = Serial.read(); // Reads the data from the serial port
  }
@@ -35,12 +36,11 @@ void loop() {
 //Serial.println(rec);
 
   if (rec == 'z') {
-    digitalWrite(leds, LOW);
     analogWrite(outputV, 255);
     arrancar = 1;
   }
   else if (rec == '1') {
-    digitalWrite(leds, HIGH);
+    neon = !neon;
   }
 
   else if (rec == '2') {
@@ -225,7 +225,7 @@ void loop() {
    else {
        arrancar = 0;
      }
-   analogWrite(outputV, 110);//75 
+   analogWrite(outputV, 110);//75
   }
 
   else if (rec == 'q') {
